@@ -1,4 +1,4 @@
-import Flask
+from flask import Flask
 from upload_excel import upload_excel
 from ask_question import ask_question
  
