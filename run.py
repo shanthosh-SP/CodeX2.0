@@ -5,7 +5,11 @@ import logging
 
 # Set up logging
 logging.basicConfig(filename='streamlit_log.txt', level=logging.DEBUG)
+import subprocess
 
+
+# Launch Flask app in a separate process
+subprocess.Popen(["python", "app.py"])
 # Streamlit app to upload Excel file and ask questions
 
 st.title("Natural Language to SQL Streamlit App")
