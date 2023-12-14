@@ -8,4 +8,4 @@ app.register_blueprint(upload_excel)
 app.register_blueprint(ask_question)
  
 if __name__ == '__main__':
-    app.run(debug=True, port=config.API_PORT)
+    app.run(debug=True, port=config.API_PORT,host='0.0.0.0')
