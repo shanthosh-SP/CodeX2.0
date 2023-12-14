@@ -1,0 +1,7 @@
+flask
+pandas
+sqlalchemy
+requests
+streamlit
+python-dotenv
+transformers
