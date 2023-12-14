@@ -9,7 +9,7 @@ import subprocess
 
 
 # Launch Flask app in a separate process
-subprocess.Popen(['/home/appuser/venv/bin/python','app.py'], close_fds=True)
+subprocess.Popen(['python','app.py'], close_fds=True)
 # Streamlit app to upload Excel file and ask questions
 
 st.title("Natural Language to SQL Streamlit App")
