@@ -25,7 +25,7 @@ with st.form(key='demo_form'):
 # Handle file upload
 if file_uploaded and upload_button:
     st.subheader("Uploaded Excel File Preview")
-    upload_url = "http://172.20.90.89:5000/upload_excel"
+    upload_url = "https://mocki.io/v1/fd148d60-1ec3-4d43-affb-1bdc36b6896e"
     files = {'file': file_uploaded}
     upload_response = requests.post(upload_url, files=files)
     st.write(upload_response.json())
@@ -47,7 +47,7 @@ if question and demo_button:
             st.code(schema['schema_json'])
             st.write("-" * 50)
 
-        ask_url = "http://172.20.90.89:5000/ask_question"
+        ask_url = "https://mocki.io/v1/fd148d60-1ec3-4d43-affb-1bdc36b6896e"
         params = {'question': question}
         response = requests.post(ask_url, data=params)
 
