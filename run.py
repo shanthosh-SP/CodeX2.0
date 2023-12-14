@@ -37,7 +37,7 @@ if file_uploaded and upload_button:
 # Handle question and demo
 if question and demo_button:
     st.subheader("Stored Table Schemas")
-    schemas_url = "http://172.20.90.89:5000/get_table_schemas"
+    schemas_url = "https://mocki.io/v1/fd148d60-1ec3-4d43-affb-1bdc36b6896e"
     schemas_response = requests.get(schemas_url)
 
     if schemas_response.status_code == 200:
