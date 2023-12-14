@@ -27,7 +27,7 @@ with st.form(key='demo_form'):
 # Handle file upload
 if file_uploaded and upload_button:
     st.subheader("Uploaded Excel File Preview")
-    upload_url = "http://127.0.0.1:5001/upload_excel"
+    upload_url = "http://127.0.0.1:5000/upload_excel"
     files = {'file': file_uploaded}
     upload_response = requests.post(upload_url, files=files)
     st.write(upload_response.json())
@@ -39,7 +39,7 @@ if file_uploaded and upload_button:
 # Handle question and demo
 if question and demo_button:
     st.subheader("Stored Table Schemas")
-    schemas_url = "http://127.0.0.1:5001/get_table_schemas"
+    schemas_url = "http://127.0.0.1:5000/get_table_schemas"
     schemas_response = requests.get(schemas_url)
 
     if schemas_response.status_code == 200:
@@ -49,7 +49,7 @@ if question and demo_button:
             st.code(schema['schema_json'])
             st.write("-" * 50)
 
-        ask_url = "http://127.0.0.1:5001/ask_question"
+        ask_url = "http://127.0.0.1:5000/ask_question"
         params = {'question': question}
         response = requests.post(ask_url, data=params)
 
